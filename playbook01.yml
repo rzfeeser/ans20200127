@@ -1,0 +1,19 @@
+---
+- name: Our first playbook
+  hosts: planetexpress
+  gather_facts: yes          ## <-- this is YES by default
+
+  vars:
+    ghostbusters: "Who you gonna call"
+    igor: "sitting across from me"
+
+  tasks:
+  - name: Our first task
+    debug:
+      var: ansible_facts.bios_version
+
+  - name: Spend 10 minutes trying to write out facts locally
+    copy:
+      content: "{{ ansible_facts }}"
+      dest: "~/ansible_facts.txt.{{ inventory_hostname }}"
+    delegate_to: localhost

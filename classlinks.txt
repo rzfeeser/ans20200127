@@ -1,1 +1,12 @@
+Ansible project on GitHub:
 https://github.com/ansible/
+
+Dell PowerMax Modules:
+https://github.com/rzfeeser/ans20200127
+
+Dell PowerMax Docs:
+https://github.com/dell/ansible-powermax/tree/master/dellemc_ansible/docs
+
+Useful Modules:
+- copy:
+  https://docs.ansible.com/ansible/latest/modules/copy_module.html
