@@ -1,11 +1,23 @@
 Ansible project on GitHub:
 https://github.com/ansible/
 
-Dell PowerMax Modules:
-https://github.com/rzfeeser/ans20200127
+Ansible.cfg Example:  # set globals in this file... stick in home directory and put a . before it to make it a hidden file
+https://github.com/ansible/ansible/blob/devel/examples/ansible.cfg
+
+Ansible Modules:   # modules that install with Ansible
+https://docs.ansible.com/ansible/latest/modules/list_of_all_modules.html
+
+Ansible Playbook Keywords:  # you program ansible with these words
+https://docs.ansible.com/ansible/latest/reference_appendices/playbooks_keywords.html
+
+Dell PowerMax for Ansible Modules:
+https://github.com/dell/ansible-powermax/
 
 Dell PowerMax Docs:
 https://github.com/dell/ansible-powermax/tree/master/dellemc_ansible/docs
+
+Documentation on PyU4V:
+https://pyu4v.readthedocs.io/en/latest/
 
 Useful Modules:
 - copy:
