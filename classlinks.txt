@@ -19,6 +19,12 @@ https://github.com/dell/ansible-powermax/tree/master/dellemc_ansible/docs
 Documentation on PyU4V:
 https://pyu4v.readthedocs.io/en/latest/
 
+If copy/file/template have a problem (happens on Centos boxes with Python3):
+  - package: libselinux-python
+  - commands:
+     - yum install libselinux-python
+     - python3 -m pip install selinux
+
 Useful Modules:
 - copy:
   https://docs.ansible.com/ansible/latest/modules/copy_module.html
