@@ -105,21 +105,3 @@
   - name: Display expandvolresults
     debug:
       var: expandvolresults
-
-#  - name: Create Dell PowerMax Volume
-#    dellemc_powermax_volume:
-#      unispherehost: 10.126.70.19
-#      universion: "90"
-#      verifycert: False
-#      user: smc
-#      password: smc
-#      serial_no: "{{ results.Arrays[0] }}"
-#      vol_name: "ivan"
-#      size: 10
-#      sg_name: 
-#      state: present
-#    register: volumeresults
-#
-#  - name: display the results of building a volume
-#    debug:
-#      var: volumeresults

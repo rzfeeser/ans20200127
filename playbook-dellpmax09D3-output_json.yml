@@ -1,0 +1,101 @@
+---
+- name: PowerMax Dell Playbook v9 - Expanding Volumes with Block Rescue
+  hosts: localhost
+  gather_facts: yes  # for ansible_date_time.date
+
+  # a technique to prompt users for sensitive data
+  # without hard coding that data into the playbook
+  vars_prompt:
+    - name: un
+      prompt: "What is the powermax user to operate as? "
+      default: smc
+    - name: pw
+      prompt: "What is the powermax password? "
+
+  # mapping some vars at top of playbook
+  # this makes it easier to have global changes
+  vars:
+    ush: 10.126.70.19
+    usv: "90"
+    vc: False
+    new_size_in_gb: 25
+
+  tasks:
+  - name: Pre-Check Phase
+    block:    
+      - name: Run PMax gather_facts module
+        dellemc_powermax_gatherfacts:
+          unispherehost: "{{ ush }}"
+          universion: "{{ usv }}"
+          verifycert: "{{ vc }}"
+          user: "{{ un }}"
+          password: "{{ pw }}"
+        register: results
+
+      - name: Provide serial number for next gather facts
+        dellemc_powermax_gatherfacts:
+          unispherehost: "{{ ush }}"
+          universion: "{{ usv }}"
+          verifycert: "{{ vc }}"
+          user: "{{ un }}"
+          password: "{{ pw }}"
+          serial_no: "{{ results.Arrays[0] }}"
+          gather_subset:
+            - vol
+            - sg
+            - srp
+            - pg
+            - host
+            - hg
+            - port
+            - mv
+            - rdf
+        register: arrayresults
+
+      # this is created on the controller
+      # because the playbook is running against host: localhost
+      - name: Create a location for PowerMax output
+        file:
+          state: directory
+          dest: pmax_audit/
+
+      # this is created on the controller
+      # because the playbook is running against host: localhost
+      - name: Create output file
+        copy:
+          dest: "pmax_audit/{{ results.Arrays[0] }}-{{ ansible_date_time.date }}.json"
+          content: "{{ arrayresults }}"
+    
+    # if the rescue block successfully executes then the playbook will continue
+    # a second fail within the rescue block will abort the entire playbook    
+    rescue:
+      - name: Cannot harvest facts. Exiting.
+        fail:
+          msg: Cannot harvest facts. Playbook will not continue. Exiting.
+
+
+  - name: Maintenance Phase - Expand Volume
+    block:
+      - name: Expand Volume
+        dellemc_powermax_volume:
+          unispherehost: "{{ ush }}"
+          universion: "{{ usv }}"
+          verifycert: "{{ vc }}"
+          user: "{{ un }}"
+          password: "{{ pw }}"
+          serial_no: "{{ results.Arrays[0] }}"
+          size: "{{ new_size_in_gb }}"
+          cap_unit: GB
+          vol_id: "{{ item }}"
+          state: present
+        register: expandvolresults
+        loop: "{{ sgresults.storage_group_volumes }}"
+
+      - name: Display expandvolresults
+        debug:
+          var: expandvolresults
+          
+    rescue:
+      - name: Failed expanding volume
+        fail:
+          msg: "Failed expanding volume. Consider designing roll=back tasks before exiting."

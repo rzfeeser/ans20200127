@@ -1,5 +1,5 @@
 ---
-- name: PowerMax Dell Playbook v7 - del VOL from active SG
+- name: PowerMax Dell Playbook v7 - del VOL from active SG - FAILS
   hosts: localhost
   gather_facts: yes  # for ansible_date_time.date
 
@@ -40,11 +40,15 @@
         - rdf
     register: arrayresults
 
+  # this is created on the controller
+  # because the playbook is running against host: localhost
   - name: Create a location for PowerMax output
     file:
       state: directory
       dest: pmax_audit/
-
+      
+  # this is created on the controller
+  # because the playbook is running against host: localhost
   - name: Create output file
     copy:
       dest: "pmax_audit/{{ results.Arrays[0] }}-{{ ansible_date_time.date }}.json"
@@ -76,11 +80,11 @@
 
   - name: Pull info about a volume by ID
     dellemc_powermax_volume:
-      unispherehost: 10.126.70.19
-      universion: "90"
-      verifycert: False
-      user: smc
-      password: smc
+      unispherehost: "{{ ush }}"
+      universion: "{{ usv }}"
+      verifycert: "{{ vc }}"
+      user: "{{ un }}"
+      password: "{{ pw }}"
       serial_no: "{{ results.Arrays[0] }}"
       vol_id: "{{ item }}"
       state: present
@@ -96,11 +100,11 @@
   # BEFORE YOU CAN REMOVE THE VG
   - name: Delete a volume while in an SG (operation not permitted)
     dellemc_powermax_volume:
-      unispherehost: 10.126.70.19
-      universion: "90"
-      verifycert: False
-      user: smc
-      password: smc
+      unispherehost: "{{ ush }}"
+      universion: "{{ usv }}"
+      verifycert: "{{ vc }}"
+      user: "{{ un }}"
+      password: "{{ pw }}"
       serial_no: "{{ results.Arrays[0] }}"
       vol_id: "{{ item }}"
       state: absent

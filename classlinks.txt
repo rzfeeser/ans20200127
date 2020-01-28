@@ -10,6 +10,12 @@ https://docs.ansible.com/ansible/latest/modules/list_of_all_modules.html
 Ansible Playbook Keywords:  # you program ansible with these words
 https://docs.ansible.com/ansible/latest/reference_appendices/playbooks_keywords.html
 
+Ansible Using Variables:
+https://docs.ansible.com/ansible/latest/user_guide/playbooks_variables.html
+
+Ansible loops:
+https://docs.ansible.com/ansible/latest/user_guide/playbooks_loops.html
+
 Dell PowerMax for Ansible Modules:
 https://github.com/dell/ansible-powermax/
 
@@ -28,3 +34,5 @@ If copy/file/template have a problem (happens on Centos boxes with Python3):
 Useful Modules:
 - copy:
   https://docs.ansible.com/ansible/latest/modules/copy_module.html
+
+

@@ -3,6 +3,8 @@
   hosts: localhost
   gather_facts: yes  # for ansible_date_time.date
 
+  # a technique to prompt users for sensitive data
+  # without hard coding that data into the playbook
   vars_prompt:
     - name: un
       prompt: "What is the powermax user to operate as? "
@@ -10,6 +12,8 @@
     - name: pw
       prompt: "What is the powermax password? "
 
+  # mapping some vars at top of playbook
+  # this makes it easier to have global changes
   vars:
     ush: 10.126.70.19
     usv: "90"
@@ -45,13 +49,16 @@
         - rdf
     register: arrayresults
 
+  # this is created on the controller
+  # because the playbook is running against host: localhost
   - name: Create a location for PowerMax output
     file:
       state: directory
       dest: pmax_audit/
 
+  # this is created on the controller
+  # because the playbook is running against host: localhost
   - name: Create output file
     copy:
       dest: "pmax_audit/{{ results.Arrays[0] }}-{{ ansible_date_time.date }}.json"
       content: "{{ arrayresults }}"
-
