@@ -1,0 +1,81 @@
+---
+- name: PowerMax Dell Playbook v2
+  hosts: localhost
+  gather_facts: yes  # for ansible_date_time.date
+
+  tasks:
+  - name: Try running our new gather_facts module
+    dellemc_powermax_gatherfacts:
+      unispherehost: 10.126.70.19
+      universion: "90" 
+      verifycert: False
+      user: smc
+      password: smc
+    register: results
+
+  - name: Provide serial number for next gather facts
+    dellemc_powermax_gatherfacts:
+      unispherehost: 10.126.70.19
+      universion: "90"
+      verifycert: False
+      user: smc
+      password: smc
+      serial_no: "{{ results.Arrays[0] }}"
+      gather_subset:
+        - vol
+        - sg
+        - srp
+        - pg
+        - host
+        - hg
+        - port
+        - mv
+        - rdf
+    register: arrayresults
+
+  - name: Create a location for PowerMax output
+    file:
+      state: directory
+      dest: pmax_audit/
+
+  - name: Create output file
+    copy:
+      dest: "pmax_audit/{{ results.Arrays[0] }}-{{ ansible_date_time.date }}.json"
+      content: "{{ arrayresults }}"
+
+  - name: Create an empty Storage group
+    dellemc_powermax_storagegroup:
+      unispherehost: 10.126.70.19
+      universion: "90"
+      verifycert: False
+      user: smc
+      password: smc
+      serial_no: "{{ results.Arrays[0] }}"
+      sg_name: "ansible_sg"
+      service_level: "Diamond"
+      srp: "SRP_1"
+      compression: True
+      state: present     ## change this to absent to remove storage group
+    register: sgresults
+
+  - name: Dsiplay results from creating Storage Group
+    debug:
+      var: sgresults
+
+#  - name: Create Dell PowerMax Volume
+#    dellemc_powermax_volume:
+#      unispherehost: 10.126.70.19
+#      universion: "90"
+#      verifycert: False
+#      user: smc
+#      password: smc
+#      serial_no: "{{ results.Arrays[0] }}"
+#      vol_name: "ivan"
+#      size: 10
+#      sg_name: 
+#      state: present
+#    register: volumeresults
+#
+#  - name: display the results of building a volume
+#    debug:
+#      var: volumeresults

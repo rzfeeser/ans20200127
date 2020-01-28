@@ -1,0 +1,107 @@
+---
+- name: PowerMax Dell Playbook v5
+  hosts: localhost
+  gather_facts: yes  # for ansible_date_time.date
+
+  tasks:
+  - name: Run PMax gather_facts module
+    dellemc_powermax_gatherfacts:
+      unispherehost: 10.126.70.19
+      universion: "90" 
+      verifycert: False
+      user: smc
+      password: smc
+    register: results
+
+  - name: Provide serial number for next gather facts
+    dellemc_powermax_gatherfacts:
+      unispherehost: 10.126.70.19
+      universion: "90"
+      verifycert: False
+      user: smc
+      password: smc
+      serial_no: "{{ results.Arrays[0] }}"
+      gather_subset:
+        - vol
+        - sg
+        - srp
+        - pg
+        - host
+        - hg
+        - port
+        - mv
+        - rdf
+    register: arrayresults
+
+  - name: Create a location for PowerMax output
+    file:
+      state: directory
+      dest: pmax_audit/
+
+  - name: Create output file
+    copy:
+      dest: "pmax_audit/{{ results.Arrays[0] }}-{{ ansible_date_time.date }}.json"
+      content: "{{ arrayresults }}"
+
+  - name: Create a Storage group and add volumes to new SG
+    dellemc_powermax_storagegroup:
+      unispherehost: 10.126.70.19
+      universion: "90"
+      verifycert: False
+      user: smc
+      password: smc
+      serial_no: "{{ results.Arrays[0] }}"
+      sg_name: "ansible_sg"
+      service_level: "Diamond"
+      srp: "SRP_1"
+      compression: True
+      state: present     ## change this to absent to remove storage group
+      volumes:
+        - vol_name: alpha
+          size: 10
+          cap_size: GB
+        - vol_name: beta
+          size: 10
+          cap_size: GB
+      vol_state: present-in-group
+    register: sgresults
+
+  - name: Dsiplay results from creating Storage Group and Volume states
+    debug:
+      var: sgresults
+
+  - name: Pull info about a volume by ID
+    dellemc_powermax_volume:
+      unispherehost: 10.126.70.19
+      universion: "90"
+      verifycert: False
+      user: smc
+      password: smc
+      serial_no: "{{ results.Arrays[0] }}"
+      vol_id: "{{ item }}"
+      state: present
+    register: volresults
+    loop: "{{ sgresults.storage_group_volumes }}"
+
+  - name: Display volresults
+    debug:
+      var: volresults
+
+
+#  - name: Create Dell PowerMax Volume
+#    dellemc_powermax_volume:
+#      unispherehost: 10.126.70.19
+#      universion: "90"
+#      verifycert: False
+#      user: smc
+#      password: smc
+#      serial_no: "{{ results.Arrays[0] }}"
+#      vol_name: "ivan"
+#      size: 10
+#      sg_name: 
+#      state: present
+#    register: volumeresults
+#
+#  - name: display the results of building a volume
+#    debug:
+#      var: volumeresults
