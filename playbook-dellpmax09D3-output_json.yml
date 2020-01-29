@@ -75,7 +75,7 @@
       - name: Fail is Storage Group does not exist
         fail:
           msg: "The Storage Group you supplied does not exist within the PMax array! Aborting!"
-        when: "snig not in arrayresults.StorageGroups"
+        when: "sg2expand not in arrayresults.StorageGroups"
         
     # if the rescue block successfully executes then the playbook will continue
     # a second fail within the rescue block will abort the entire playbook    
@@ -95,7 +95,7 @@
           user: "{{ un }}"
           password: "{{ pw }}"
           serial_no: "{{ results.Arrays[0] }}"
-          sg_name: "ansible_sg"
+          sg_name: "{{ sg2expand }}"
           service_level: "Diamond"
           srp: "SRP_1"
           compression: True
