@@ -876,3 +876,246 @@
 2020-01-28 15:20:01,099 dellemc_powermax_gatherfacts.py INFO : Got PyU4V Unisphere instance for common lib method access on VMAX
 2020-01-28 15:20:01,099 dellemc_powermax_gatherfacts.py INFO : Getting Array List 
 2020-01-28 15:20:01,172 dellemc_powermax_gatherfacts.py ERROR : Get Array List for Unisphere host {'type': 'str', 'required': True} failed with error                    An unknown exception occurred.
+2020-01-29 14:17:25,022 dellemc_powermax_gatherfacts.py INFO : universion_details: {'is_valid_universion': True, 'user_message': ''}
+2020-01-29 14:17:25,022 univmax_conn.py WARNING : No array id specified. Please set array ID using the "set_array_id(array_id)" function.
+2020-01-29 14:17:25,022 dellemc_powermax_gatherfacts.py INFO : Got PyU4V Unisphere instance for common lib method access on VMAX
+2020-01-29 14:17:25,023 dellemc_powermax_gatherfacts.py INFO : Getting Array List 
+2020-01-29 14:17:25,093 dellemc_powermax_gatherfacts.py INFO : Got 1 Arrays from Unisphere Host  {'type': 'str', 'required': True}
+2020-01-29 14:17:25,936 dellemc_powermax_gatherfacts.py INFO : universion_details: {'is_valid_universion': True, 'user_message': ''}
+2020-01-29 14:17:25,936 dellemc_powermax_gatherfacts.py INFO : Got PyU4V instance for provisioning on to PowerMax 
+2020-01-29 14:17:25,937 dellemc_powermax_gatherfacts.py INFO : Got PyU4V instance for replication on to PowerMax 
+2020-01-29 14:17:25,937 dellemc_powermax_gatherfacts.py INFO : Getting Volume List 
+2020-01-29 14:17:25,998 dellemc_powermax_gatherfacts.py INFO : Successfully listed 195 TDEV volumes from array 000197900507
+2020-01-29 14:17:25,998 dellemc_powermax_gatherfacts.py INFO : Getting Storage Group List 
+2020-01-29 14:17:26,012 dellemc_powermax_gatherfacts.py INFO : Successfully listed 19 Storage Group from array 000197900507
+2020-01-29 14:17:26,013 dellemc_powermax_gatherfacts.py INFO : Getting Storage Resource Pool List
+2020-01-29 14:17:26,024 dellemc_powermax_gatherfacts.py INFO : Got 1 Storage Resource Pool from array 000197900507
+2020-01-29 14:17:26,054 dellemc_powermax_gatherfacts.py INFO : Successfully listed 1 Storage Resource Pool details from array 000197900507
+2020-01-29 14:17:26,054 dellemc_powermax_gatherfacts.py INFO : Getting Port Group List 
+2020-01-29 14:17:26,067 dellemc_powermax_gatherfacts.py INFO : Got 2 PortGroup from array 000197900507
+2020-01-29 14:17:26,067 dellemc_powermax_gatherfacts.py INFO : Getting Host List 
+2020-01-29 14:17:26,081 dellemc_powermax_gatherfacts.py INFO : Got 34 Host from array 000197900507
+2020-01-29 14:17:26,081 dellemc_powermax_gatherfacts.py INFO : Getting Host Group List 
+2020-01-29 14:17:26,091 dellemc_powermax_gatherfacts.py INFO : Got 0 Host Group from array 000197900507
+2020-01-29 14:17:26,091 dellemc_powermax_gatherfacts.py INFO : Getting Port List 
+2020-01-29 14:17:26,107 dellemc_powermax_gatherfacts.py INFO : Got 36 Port from array 000197900507
+2020-01-29 14:17:26,107 dellemc_powermax_gatherfacts.py INFO : Getting Masking View List
+2020-01-29 14:17:26,121 dellemc_powermax_gatherfacts.py INFO : Got 18 Getting Masking View from array 000197900507
+2020-01-29 14:17:26,121 dellemc_powermax_gatherfacts.py INFO : Getting rdf group List 
+2020-01-29 14:17:26,132 dellemc_powermax_gatherfacts.py INFO : Successfully listed 0 rdf group from array 000197900507
+2020-01-29 14:29:25,763 dellemc_powermax_gatherfacts.py INFO : universion_details: {'is_valid_universion': True, 'user_message': ''}
+2020-01-29 14:29:25,764 univmax_conn.py WARNING : No array id specified. Please set array ID using the "set_array_id(array_id)" function.
+2020-01-29 14:29:25,764 dellemc_powermax_gatherfacts.py INFO : Got PyU4V Unisphere instance for common lib method access on VMAX
+2020-01-29 14:29:25,764 dellemc_powermax_gatherfacts.py INFO : Getting Array List 
+2020-01-29 14:29:25,838 dellemc_powermax_gatherfacts.py INFO : Got 1 Arrays from Unisphere Host  {'type': 'str', 'required': True}
+2020-01-29 14:29:26,700 dellemc_powermax_gatherfacts.py INFO : universion_details: {'is_valid_universion': True, 'user_message': ''}
+2020-01-29 14:29:26,700 dellemc_powermax_gatherfacts.py INFO : Got PyU4V instance for provisioning on to PowerMax 
+2020-01-29 14:29:26,701 dellemc_powermax_gatherfacts.py INFO : Got PyU4V instance for replication on to PowerMax 
+2020-01-29 14:29:26,701 dellemc_powermax_gatherfacts.py INFO : Getting Volume List 
+2020-01-29 14:29:26,755 dellemc_powermax_gatherfacts.py INFO : Successfully listed 195 TDEV volumes from array 000197900507
+2020-01-29 14:29:26,755 dellemc_powermax_gatherfacts.py INFO : Getting Storage Group List 
+2020-01-29 14:29:26,771 dellemc_powermax_gatherfacts.py INFO : Successfully listed 19 Storage Group from array 000197900507
+2020-01-29 14:29:26,771 dellemc_powermax_gatherfacts.py INFO : Getting Storage Resource Pool List
+2020-01-29 14:29:26,781 dellemc_powermax_gatherfacts.py INFO : Got 1 Storage Resource Pool from array 000197900507
+2020-01-29 14:29:26,813 dellemc_powermax_gatherfacts.py INFO : Successfully listed 1 Storage Resource Pool details from array 000197900507
+2020-01-29 14:29:26,813 dellemc_powermax_gatherfacts.py INFO : Getting Port Group List 
+2020-01-29 14:29:26,828 dellemc_powermax_gatherfacts.py INFO : Got 2 PortGroup from array 000197900507
+2020-01-29 14:29:26,829 dellemc_powermax_gatherfacts.py INFO : Getting Host List 
+2020-01-29 14:29:26,841 dellemc_powermax_gatherfacts.py INFO : Got 34 Host from array 000197900507
+2020-01-29 14:29:26,842 dellemc_powermax_gatherfacts.py INFO : Getting Host Group List 
+2020-01-29 14:29:26,852 dellemc_powermax_gatherfacts.py INFO : Got 0 Host Group from array 000197900507
+2020-01-29 14:29:26,852 dellemc_powermax_gatherfacts.py INFO : Getting Port List 
+2020-01-29 14:29:26,866 dellemc_powermax_gatherfacts.py INFO : Got 36 Port from array 000197900507
+2020-01-29 14:29:26,866 dellemc_powermax_gatherfacts.py INFO : Getting Masking View List
+2020-01-29 14:29:26,880 dellemc_powermax_gatherfacts.py INFO : Got 18 Getting Masking View from array 000197900507
+2020-01-29 14:29:26,880 dellemc_powermax_gatherfacts.py INFO : Getting rdf group List 
+2020-01-29 14:29:26,891 dellemc_powermax_gatherfacts.py INFO : Successfully listed 0 rdf group from array 000197900507
+2020-01-29 14:29:30,109 dellemc_powermax_storagegroup.py INFO : universion_details: {'is_valid_universion': True, 'user_message': ''}
+2020-01-29 14:29:30,109 dellemc_powermax_storagegroup.py INFO : Got PyU4V instance for provisioning on PowerMax 
+2020-01-29 14:29:30,109 dellemc_powermax_storagegroup.py INFO : Getting storage group ansible_sg details
+2020-01-29 14:29:30,167 dellemc_powermax_storagegroup.py INFO : The storage group False needs to be modified and the modified param are {} 
+2020-01-29 14:29:30,167 dellemc_powermax_storagegroup.py INFO : Get volumes for storage group ansible_sg
+2020-01-29 14:29:30,167 dellemc_powermax_storagegroup.py INFO : Getting the list of volumes from storage group ansible_sg
+2020-01-29 14:29:30,185 dellemc_powermax_storagegroup.py INFO : 3 volumes present in storage group ansible_sg
+2020-01-29 14:29:30,185 dellemc_powermax_storagegroup.py INFO : Found storage group {'storageGroupId': 'ansible_sg', 'slo': 'Diamond', 'base_slo_name': 'Diamond', 'service_level': 'Diamond', 'srp': 'SRP_1', 'slo_compliance': 'STABLE', 'num_of_vols': 3, 'num_of_child_sgs': 0, 'num_of_parent_sgs': 0, 'num_of_masking_views': 0, 'num_of_snapshots': 0, 'cap_gb': 52.0, 'device_emulation': 'FBA', 'type': 'Standalone', 'unprotected': True, 'compression': True, 'VPSaved': '100.0%', 'vp_saved_percent': 100.0}
+2020-01-29 14:29:30,185 dellemc_powermax_storagegroup.py INFO : Getting storage group ansible_sg details
+2020-01-29 14:29:31,329 dellemc_powermax_volume.py INFO : universion_details: {'is_valid_universion': True, 'user_message': ''}
+2020-01-29 14:29:31,330 dellemc_powermax_volume.py INFO : Got PyU4V instance for provisioning on to VMAX 
+2020-01-29 14:29:31,330 dellemc_powermax_volume.py INFO : Getting volume 000E6 details using native id
+2020-01-29 14:29:31,446 dellemc_powermax_volume.py INFO : Existing Size: 21.0 GB, Specified Size: 25.00 GB
+2020-01-29 14:29:31,446 dellemc_powermax_volume.py INFO : Expanding volume capacity from 21.0 GB to 25.00 GB.
+2020-01-29 14:29:39,558 dellemc_powermax_volume.py INFO : Getting volume 000E6 details using native id
+2020-01-29 14:29:40,363 dellemc_powermax_volume.py INFO : universion_details: {'is_valid_universion': True, 'user_message': ''}
+2020-01-29 14:29:40,364 dellemc_powermax_volume.py INFO : Got PyU4V instance for provisioning on to VMAX 
+2020-01-29 14:29:40,364 dellemc_powermax_volume.py INFO : Getting volume 000E7 details using native id
+2020-01-29 14:29:40,414 dellemc_powermax_volume.py INFO : Existing Size: 21.0 GB, Specified Size: 25.00 GB
+2020-01-29 14:29:40,414 dellemc_powermax_volume.py INFO : Expanding volume capacity from 21.0 GB to 25.00 GB.
+2020-01-29 14:29:48,371 dellemc_powermax_volume.py INFO : Getting volume 000E7 details using native id
+2020-01-29 14:29:49,142 dellemc_powermax_volume.py INFO : universion_details: {'is_valid_universion': True, 'user_message': ''}
+2020-01-29 14:29:49,143 dellemc_powermax_volume.py INFO : Got PyU4V instance for provisioning on to VMAX 
+2020-01-29 14:29:49,143 dellemc_powermax_volume.py INFO : Getting volume 000E8 details using native id
+2020-01-29 14:29:49,200 dellemc_powermax_volume.py INFO : Existing Size: 10.0 GB, Specified Size: 25.00 GB
+2020-01-29 14:29:49,200 dellemc_powermax_volume.py INFO : Expanding volume capacity from 10.0 GB to 25.00 GB.
+2020-01-29 14:29:57,633 dellemc_powermax_volume.py INFO : Getting volume 000E8 details using native id
+2020-01-29 14:39:17,891 dellemc_powermax_gatherfacts.py INFO : universion_details: {'is_valid_universion': True, 'user_message': ''}
+2020-01-29 14:39:17,891 univmax_conn.py WARNING : No array id specified. Please set array ID using the "set_array_id(array_id)" function.
+2020-01-29 14:39:17,891 dellemc_powermax_gatherfacts.py INFO : Got PyU4V Unisphere instance for common lib method access on VMAX
+2020-01-29 14:39:17,892 dellemc_powermax_gatherfacts.py INFO : Getting Array List 
+2020-01-29 14:39:17,967 dellemc_powermax_gatherfacts.py INFO : Got 1 Arrays from Unisphere Host  {'type': 'str', 'required': True}
+2020-01-29 14:39:18,809 dellemc_powermax_gatherfacts.py INFO : universion_details: {'is_valid_universion': True, 'user_message': ''}
+2020-01-29 14:39:18,809 dellemc_powermax_gatherfacts.py INFO : Got PyU4V instance for provisioning on to PowerMax 
+2020-01-29 14:39:18,810 dellemc_powermax_gatherfacts.py INFO : Got PyU4V instance for replication on to PowerMax 
+2020-01-29 14:39:18,810 dellemc_powermax_gatherfacts.py INFO : Getting Volume List 
+2020-01-29 14:39:18,863 dellemc_powermax_gatherfacts.py INFO : Successfully listed 195 TDEV volumes from array 000197900507
+2020-01-29 14:39:18,863 dellemc_powermax_gatherfacts.py INFO : Getting Storage Group List 
+2020-01-29 14:39:18,879 dellemc_powermax_gatherfacts.py INFO : Successfully listed 19 Storage Group from array 000197900507
+2020-01-29 14:39:18,879 dellemc_powermax_gatherfacts.py INFO : Getting Storage Resource Pool List
+2020-01-29 14:39:18,891 dellemc_powermax_gatherfacts.py INFO : Got 1 Storage Resource Pool from array 000197900507
+2020-01-29 14:39:18,921 dellemc_powermax_gatherfacts.py INFO : Successfully listed 1 Storage Resource Pool details from array 000197900507
+2020-01-29 14:39:18,921 dellemc_powermax_gatherfacts.py INFO : Getting Port Group List 
+2020-01-29 14:39:18,935 dellemc_powermax_gatherfacts.py INFO : Got 2 PortGroup from array 000197900507
+2020-01-29 14:39:18,935 dellemc_powermax_gatherfacts.py INFO : Getting Host List 
+2020-01-29 14:39:18,946 dellemc_powermax_gatherfacts.py INFO : Got 34 Host from array 000197900507
+2020-01-29 14:39:18,946 dellemc_powermax_gatherfacts.py INFO : Getting Host Group List 
+2020-01-29 14:39:18,957 dellemc_powermax_gatherfacts.py INFO : Got 0 Host Group from array 000197900507
+2020-01-29 14:39:18,957 dellemc_powermax_gatherfacts.py INFO : Getting Port List 
+2020-01-29 14:39:18,971 dellemc_powermax_gatherfacts.py INFO : Got 36 Port from array 000197900507
+2020-01-29 14:39:18,971 dellemc_powermax_gatherfacts.py INFO : Getting Masking View List
+2020-01-29 14:39:18,982 dellemc_powermax_gatherfacts.py INFO : Got 18 Getting Masking View from array 000197900507
+2020-01-29 14:39:18,982 dellemc_powermax_gatherfacts.py INFO : Getting rdf group List 
+2020-01-29 14:39:18,992 dellemc_powermax_gatherfacts.py INFO : Successfully listed 0 rdf group from array 000197900507
+2020-01-29 14:40:24,558 dellemc_powermax_gatherfacts.py INFO : universion_details: {'is_valid_universion': True, 'user_message': ''}
+2020-01-29 14:40:24,559 univmax_conn.py WARNING : No array id specified. Please set array ID using the "set_array_id(array_id)" function.
+2020-01-29 14:40:24,559 dellemc_powermax_gatherfacts.py INFO : Got PyU4V Unisphere instance for common lib method access on VMAX
+2020-01-29 14:40:24,559 dellemc_powermax_gatherfacts.py INFO : Getting Array List 
+2020-01-29 14:40:24,605 dellemc_powermax_gatherfacts.py INFO : Got 1 Arrays from Unisphere Host  {'type': 'str', 'required': True}
+2020-01-29 14:40:25,462 dellemc_powermax_gatherfacts.py INFO : universion_details: {'is_valid_universion': True, 'user_message': ''}
+2020-01-29 14:40:25,463 dellemc_powermax_gatherfacts.py INFO : Got PyU4V instance for provisioning on to PowerMax 
+2020-01-29 14:40:25,463 dellemc_powermax_gatherfacts.py INFO : Got PyU4V instance for replication on to PowerMax 
+2020-01-29 14:40:25,463 dellemc_powermax_gatherfacts.py INFO : Getting Volume List 
+2020-01-29 14:40:25,512 dellemc_powermax_gatherfacts.py INFO : Successfully listed 195 TDEV volumes from array 000197900507
+2020-01-29 14:40:25,512 dellemc_powermax_gatherfacts.py INFO : Getting Storage Group List 
+2020-01-29 14:40:25,526 dellemc_powermax_gatherfacts.py INFO : Successfully listed 19 Storage Group from array 000197900507
+2020-01-29 14:40:25,526 dellemc_powermax_gatherfacts.py INFO : Getting Storage Resource Pool List
+2020-01-29 14:40:25,537 dellemc_powermax_gatherfacts.py INFO : Got 1 Storage Resource Pool from array 000197900507
+2020-01-29 14:40:25,566 dellemc_powermax_gatherfacts.py INFO : Successfully listed 1 Storage Resource Pool details from array 000197900507
+2020-01-29 14:40:25,566 dellemc_powermax_gatherfacts.py INFO : Getting Port Group List 
+2020-01-29 14:40:25,578 dellemc_powermax_gatherfacts.py INFO : Got 2 PortGroup from array 000197900507
+2020-01-29 14:40:25,578 dellemc_powermax_gatherfacts.py INFO : Getting Host List 
+2020-01-29 14:40:25,588 dellemc_powermax_gatherfacts.py INFO : Got 34 Host from array 000197900507
+2020-01-29 14:40:25,588 dellemc_powermax_gatherfacts.py INFO : Getting Host Group List 
+2020-01-29 14:40:25,598 dellemc_powermax_gatherfacts.py INFO : Got 0 Host Group from array 000197900507
+2020-01-29 14:40:25,598 dellemc_powermax_gatherfacts.py INFO : Getting Port List 
+2020-01-29 14:40:25,612 dellemc_powermax_gatherfacts.py INFO : Got 36 Port from array 000197900507
+2020-01-29 14:40:25,612 dellemc_powermax_gatherfacts.py INFO : Getting Masking View List
+2020-01-29 14:40:25,623 dellemc_powermax_gatherfacts.py INFO : Got 18 Getting Masking View from array 000197900507
+2020-01-29 14:40:25,623 dellemc_powermax_gatherfacts.py INFO : Getting rdf group List 
+2020-01-29 14:40:25,633 dellemc_powermax_gatherfacts.py INFO : Successfully listed 0 rdf group from array 000197900507
+2020-01-29 14:43:25,545 dellemc_powermax_gatherfacts.py INFO : universion_details: {'is_valid_universion': True, 'user_message': ''}
+2020-01-29 14:43:25,545 univmax_conn.py WARNING : No array id specified. Please set array ID using the "set_array_id(array_id)" function.
+2020-01-29 14:43:25,545 dellemc_powermax_gatherfacts.py INFO : Got PyU4V Unisphere instance for common lib method access on VMAX
+2020-01-29 14:43:25,545 dellemc_powermax_gatherfacts.py INFO : Getting Array List 
+2020-01-29 14:43:25,610 dellemc_powermax_gatherfacts.py INFO : Got 1 Arrays from Unisphere Host  {'type': 'str', 'required': True}
+2020-01-29 14:43:26,477 dellemc_powermax_gatherfacts.py INFO : universion_details: {'is_valid_universion': True, 'user_message': ''}
+2020-01-29 14:43:26,478 dellemc_powermax_gatherfacts.py INFO : Got PyU4V instance for provisioning on to PowerMax 
+2020-01-29 14:43:26,478 dellemc_powermax_gatherfacts.py INFO : Got PyU4V instance for replication on to PowerMax 
+2020-01-29 14:43:26,478 dellemc_powermax_gatherfacts.py INFO : Getting Volume List 
+2020-01-29 14:43:26,532 dellemc_powermax_gatherfacts.py INFO : Successfully listed 195 TDEV volumes from array 000197900507
+2020-01-29 14:43:26,532 dellemc_powermax_gatherfacts.py INFO : Getting Storage Group List 
+2020-01-29 14:43:26,549 dellemc_powermax_gatherfacts.py INFO : Successfully listed 19 Storage Group from array 000197900507
+2020-01-29 14:43:26,549 dellemc_powermax_gatherfacts.py INFO : Getting Storage Resource Pool List
+2020-01-29 14:43:26,559 dellemc_powermax_gatherfacts.py INFO : Got 1 Storage Resource Pool from array 000197900507
+2020-01-29 14:43:26,587 dellemc_powermax_gatherfacts.py INFO : Successfully listed 1 Storage Resource Pool details from array 000197900507
+2020-01-29 14:43:26,587 dellemc_powermax_gatherfacts.py INFO : Getting Port Group List 
+2020-01-29 14:43:26,600 dellemc_powermax_gatherfacts.py INFO : Got 2 PortGroup from array 000197900507
+2020-01-29 14:43:26,600 dellemc_powermax_gatherfacts.py INFO : Getting Host List 
+2020-01-29 14:43:26,611 dellemc_powermax_gatherfacts.py INFO : Got 34 Host from array 000197900507
+2020-01-29 14:43:26,611 dellemc_powermax_gatherfacts.py INFO : Getting Host Group List 
+2020-01-29 14:43:26,622 dellemc_powermax_gatherfacts.py INFO : Got 0 Host Group from array 000197900507
+2020-01-29 14:43:26,622 dellemc_powermax_gatherfacts.py INFO : Getting Port List 
+2020-01-29 14:43:26,638 dellemc_powermax_gatherfacts.py INFO : Got 36 Port from array 000197900507
+2020-01-29 14:43:26,638 dellemc_powermax_gatherfacts.py INFO : Getting Masking View List
+2020-01-29 14:43:26,650 dellemc_powermax_gatherfacts.py INFO : Got 18 Getting Masking View from array 000197900507
+2020-01-29 14:43:26,650 dellemc_powermax_gatherfacts.py INFO : Getting rdf group List 
+2020-01-29 14:43:26,659 dellemc_powermax_gatherfacts.py INFO : Successfully listed 0 rdf group from array 000197900507
+2020-01-29 14:43:29,973 dellemc_powermax_storagegroup.py INFO : universion_details: {'is_valid_universion': True, 'user_message': ''}
+2020-01-29 14:43:29,974 dellemc_powermax_storagegroup.py INFO : Got PyU4V instance for provisioning on PowerMax 
+2020-01-29 14:43:29,974 dellemc_powermax_storagegroup.py INFO : Getting storage group ansible_sg details
+2020-01-29 14:43:30,028 dellemc_powermax_storagegroup.py INFO : The storage group False needs to be modified and the modified param are {} 
+2020-01-29 14:43:30,028 dellemc_powermax_storagegroup.py INFO : Get volumes for storage group ansible_sg
+2020-01-29 14:43:30,028 dellemc_powermax_storagegroup.py INFO : Getting the list of volumes from storage group ansible_sg
+2020-01-29 14:43:30,044 dellemc_powermax_storagegroup.py INFO : 3 volumes present in storage group ansible_sg
+2020-01-29 14:43:30,044 dellemc_powermax_storagegroup.py INFO : Found storage group {'storageGroupId': 'ansible_sg', 'slo': 'Diamond', 'base_slo_name': 'Diamond', 'service_level': 'Diamond', 'srp': 'SRP_1', 'slo_compliance': 'STABLE', 'num_of_vols': 3, 'num_of_child_sgs': 0, 'num_of_parent_sgs': 0, 'num_of_masking_views': 0, 'num_of_snapshots': 0, 'cap_gb': 52.0, 'device_emulation': 'FBA', 'type': 'Standalone', 'unprotected': True, 'compression': True, 'VPSaved': '100.0%', 'vp_saved_percent': 100.0}
+2020-01-29 14:43:30,044 dellemc_powermax_storagegroup.py INFO : Getting storage group ansible_sg details
+2020-01-29 14:43:31,108 dellemc_powermax_volume.py INFO : universion_details: {'is_valid_universion': True, 'user_message': ''}
+2020-01-29 14:43:31,109 dellemc_powermax_volume.py INFO : Got PyU4V instance for provisioning on to VMAX 
+2020-01-29 14:43:31,109 dellemc_powermax_volume.py INFO : Getting volume 000E6 details using native id
+2020-01-29 14:43:31,178 dellemc_powermax_volume.py INFO : Existing Size: 25.0 GB, Specified Size: 28.00 GB
+2020-01-29 14:43:31,178 dellemc_powermax_volume.py INFO : Expanding volume capacity from 25.0 GB to 28.00 GB.
+2020-01-29 14:43:39,178 dellemc_powermax_volume.py INFO : Getting volume 000E6 details using native id
+2020-01-29 14:43:40,019 dellemc_powermax_volume.py INFO : universion_details: {'is_valid_universion': True, 'user_message': ''}
+2020-01-29 14:43:40,020 dellemc_powermax_volume.py INFO : Got PyU4V instance for provisioning on to VMAX 
+2020-01-29 14:43:40,020 dellemc_powermax_volume.py INFO : Getting volume 000E7 details using native id
+2020-01-29 14:43:40,075 dellemc_powermax_volume.py INFO : Existing Size: 25.0 GB, Specified Size: 28.00 GB
+2020-01-29 14:43:40,075 dellemc_powermax_volume.py INFO : Expanding volume capacity from 25.0 GB to 28.00 GB.
+2020-01-29 14:43:48,668 dellemc_powermax_volume.py INFO : Getting volume 000E7 details using native id
+2020-01-29 14:43:49,471 dellemc_powermax_volume.py INFO : universion_details: {'is_valid_universion': True, 'user_message': ''}
+2020-01-29 14:43:49,472 dellemc_powermax_volume.py INFO : Got PyU4V instance for provisioning on to VMAX 
+2020-01-29 14:43:49,472 dellemc_powermax_volume.py INFO : Getting volume 000E8 details using native id
+2020-01-29 14:43:49,526 dellemc_powermax_volume.py INFO : Existing Size: 25.0 GB, Specified Size: 28.00 GB
+2020-01-29 14:43:49,526 dellemc_powermax_volume.py INFO : Expanding volume capacity from 25.0 GB to 28.00 GB.
+2020-01-29 14:43:57,993 dellemc_powermax_volume.py INFO : Getting volume 000E8 details using native id
+2020-01-29 15:27:40,295 dellemc_powermax_gatherfacts.py INFO : universion_details: {'is_valid_universion': True, 'user_message': ''}
+2020-01-29 15:27:40,296 univmax_conn.py WARNING : No array id specified. Please set array ID using the "set_array_id(array_id)" function.
+2020-01-29 15:27:40,296 dellemc_powermax_gatherfacts.py INFO : Got PyU4V Unisphere instance for common lib method access on VMAX
+2020-01-29 15:27:40,296 dellemc_powermax_gatherfacts.py INFO : Getting Array List 
+2020-01-29 15:27:40,372 dellemc_powermax_gatherfacts.py INFO : Got 1 Arrays from Unisphere Host  {'type': 'str', 'required': True}
+2020-01-29 15:27:41,192 dellemc_powermax_gatherfacts.py INFO : universion_details: {'is_valid_universion': True, 'user_message': ''}
+2020-01-29 15:27:41,193 dellemc_powermax_gatherfacts.py INFO : Got PyU4V instance for provisioning on to PowerMax 
+2020-01-29 15:27:41,193 dellemc_powermax_gatherfacts.py INFO : Got PyU4V instance for replication on to PowerMax 
+2020-01-29 15:27:41,193 dellemc_powermax_gatherfacts.py INFO : Getting Volume List 
+2020-01-29 15:27:41,251 dellemc_powermax_gatherfacts.py INFO : Successfully listed 195 TDEV volumes from array 000197900507
+2020-01-29 15:27:41,251 dellemc_powermax_gatherfacts.py INFO : Getting Storage Group List 
+2020-01-29 15:27:41,267 dellemc_powermax_gatherfacts.py INFO : Successfully listed 19 Storage Group from array 000197900507
+2020-01-29 15:27:41,267 dellemc_powermax_gatherfacts.py INFO : Getting Storage Resource Pool List
+2020-01-29 15:27:41,277 dellemc_powermax_gatherfacts.py INFO : Got 1 Storage Resource Pool from array 000197900507
+2020-01-29 15:27:41,312 dellemc_powermax_gatherfacts.py INFO : Successfully listed 1 Storage Resource Pool details from array 000197900507
+2020-01-29 15:27:41,312 dellemc_powermax_gatherfacts.py INFO : Getting Port Group List 
+2020-01-29 15:27:41,325 dellemc_powermax_gatherfacts.py INFO : Got 2 PortGroup from array 000197900507
+2020-01-29 15:27:41,325 dellemc_powermax_gatherfacts.py INFO : Getting Host List 
+2020-01-29 15:27:41,336 dellemc_powermax_gatherfacts.py INFO : Got 34 Host from array 000197900507
+2020-01-29 15:27:41,336 dellemc_powermax_gatherfacts.py INFO : Getting Host Group List 
+2020-01-29 15:27:41,346 dellemc_powermax_gatherfacts.py INFO : Got 0 Host Group from array 000197900507
+2020-01-29 15:27:41,346 dellemc_powermax_gatherfacts.py INFO : Getting Port List 
+2020-01-29 15:27:41,360 dellemc_powermax_gatherfacts.py INFO : Got 36 Port from array 000197900507
+2020-01-29 15:27:41,361 dellemc_powermax_gatherfacts.py INFO : Getting Masking View List
+2020-01-29 15:27:41,373 dellemc_powermax_gatherfacts.py INFO : Got 18 Getting Masking View from array 000197900507
+2020-01-29 15:27:41,374 dellemc_powermax_gatherfacts.py INFO : Getting rdf group List 
+2020-01-29 15:27:41,384 dellemc_powermax_gatherfacts.py INFO : Successfully listed 0 rdf group from array 000197900507
+2020-01-29 15:27:44,656 dellemc_powermax_storagegroup.py INFO : universion_details: {'is_valid_universion': True, 'user_message': ''}
+2020-01-29 15:27:44,656 dellemc_powermax_storagegroup.py INFO : Got PyU4V instance for provisioning on PowerMax 
+2020-01-29 15:27:44,657 dellemc_powermax_storagegroup.py INFO : Getting storage group ansible_sg details
+2020-01-29 15:27:44,702 dellemc_powermax_storagegroup.py INFO : The storage group False needs to be modified and the modified param are {} 
+2020-01-29 15:27:44,702 dellemc_powermax_storagegroup.py INFO : Get volumes for storage group ansible_sg
+2020-01-29 15:27:44,702 dellemc_powermax_storagegroup.py INFO : Getting the list of volumes from storage group ansible_sg
+2020-01-29 15:27:44,721 dellemc_powermax_storagegroup.py INFO : 3 volumes present in storage group ansible_sg
+2020-01-29 15:27:44,721 dellemc_powermax_storagegroup.py INFO : Found storage group {'storageGroupId': 'ansible_sg', 'slo': 'Diamond', 'base_slo_name': 'Diamond', 'service_level': 'Diamond', 'srp': 'SRP_1', 'slo_compliance': 'STABLE', 'num_of_vols': 3, 'num_of_child_sgs': 0, 'num_of_parent_sgs': 0, 'num_of_masking_views': 0, 'num_of_snapshots': 0, 'cap_gb': 52.0, 'device_emulation': 'FBA', 'type': 'Standalone', 'unprotected': True, 'compression': True, 'VPSaved': '100.0%', 'vp_saved_percent': 100.0}
+2020-01-29 15:27:44,721 dellemc_powermax_storagegroup.py INFO : Getting storage group ansible_sg details
+2020-01-29 15:27:45,873 dellemc_powermax_volume.py INFO : universion_details: {'is_valid_universion': True, 'user_message': ''}
+2020-01-29 15:27:45,873 dellemc_powermax_volume.py INFO : Got PyU4V instance for provisioning on to VMAX 
+2020-01-29 15:27:45,873 dellemc_powermax_volume.py INFO : Getting volume 000E6 details using native id
+2020-01-29 15:27:45,944 dellemc_powermax_volume.py INFO : Existing Size: 28.0 GB, Specified Size: 31.00 GB
+2020-01-29 15:27:45,945 dellemc_powermax_volume.py INFO : Expanding volume capacity from 28.0 GB to 31.00 GB.
+2020-01-29 15:27:54,496 dellemc_powermax_volume.py INFO : Getting volume 000E6 details using native id
+2020-01-29 15:27:55,308 dellemc_powermax_volume.py INFO : universion_details: {'is_valid_universion': True, 'user_message': ''}
+2020-01-29 15:27:55,308 dellemc_powermax_volume.py INFO : Got PyU4V instance for provisioning on to VMAX 
+2020-01-29 15:27:55,308 dellemc_powermax_volume.py INFO : Getting volume 000E7 details using native id
+2020-01-29 15:27:55,355 dellemc_powermax_volume.py INFO : Existing Size: 28.0 GB, Specified Size: 31.00 GB
+2020-01-29 15:27:55,355 dellemc_powermax_volume.py INFO : Expanding volume capacity from 28.0 GB to 31.00 GB.
+2020-01-29 15:28:03,425 dellemc_powermax_volume.py INFO : Getting volume 000E7 details using native id
+2020-01-29 15:28:04,192 dellemc_powermax_volume.py INFO : universion_details: {'is_valid_universion': True, 'user_message': ''}
+2020-01-29 15:28:04,193 dellemc_powermax_volume.py INFO : Got PyU4V instance for provisioning on to VMAX 
+2020-01-29 15:28:04,193 dellemc_powermax_volume.py INFO : Getting volume 000E8 details using native id
+2020-01-29 15:28:04,241 dellemc_powermax_volume.py INFO : Existing Size: 28.0 GB, Specified Size: 31.00 GB
+2020-01-29 15:28:04,241 dellemc_powermax_volume.py INFO : Expanding volume capacity from 28.0 GB to 31.00 GB.
+2020-01-29 15:28:12,707 dellemc_powermax_volume.py INFO : Getting volume 000E8 details using native id

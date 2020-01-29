@@ -3,5 +3,11 @@
   hosts: localhost
   gather_facts: yes  # for ansible_date_time.date
 
+  vars:
+    ush: 10.126.70.19
+    usv: "90"
+    vc: False
+    new_size_in_gb: "{{ nsig }}"
+
   roles:
     - pmax_exp_vols_by_sg
