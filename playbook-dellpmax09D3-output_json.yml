@@ -95,7 +95,7 @@
         debug:
           var: expandvolresults
           
-    rescue:
+    rescue:          
       - name: Failed expanding volume
         fail:
-          msg: "Failed expanding volume. Consider designing roll=back tasks before exiting."
+          msg: "Failed expanding volume. Consider designing rollback tasks before exiting."
