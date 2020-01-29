@@ -1,0 +1,7 @@
+---
+- name: PowerMax Dell Playbook v12 - Using our Role
+  hosts: localhost
+  gather_facts: yes  # for ansible_date_time.date
+
+  roles:
+    - pmax_exp_vols_by_sg
