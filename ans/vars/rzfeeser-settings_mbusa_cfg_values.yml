@@ -1,0 +1,5 @@
+---
+protocol1: smtp
+destip1: "10.0.0.0/24"
+protocol2: sip
+destip2: "10.0.0.0/24"

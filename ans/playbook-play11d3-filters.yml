@@ -1,0 +1,49 @@
+---
+- name: Learning about some JSON filters
+  hosts: localhost
+  gather_facts: yes
+
+  vars:
+    jarlist: [1,1,1,1,1,1,5]
+    repeatlist: [1,2,2,2,4,4,4,4,4,4,4,4,9,9,9,9,9,9]
+    repeat2list: [5,5,5,5,5,5,6,7]
+    myipaddress: 192.starfish.70
+
+  vars_files:
+    - vars/complex.yml
+
+  tasks:
+  - name: Only run if this is an IP address
+    debug:
+      msg: "YES THAT IS AN IP ADDRESS!"
+    when: myipaddress | ipv4
+
+
+  - name: the min filter
+    debug:
+      msg: "The smallest value within the list is: '{{ jarlist|min }}'"
+
+  - name: the max filter
+    debug:
+      msg: "The largest value wihin the list is: '{{ jarlist|max }}'"
+
+  - name: display the complex list and a flattened list
+    debug:
+      msg: "We can change '{{ complexlist }}' into '{{ complexlist|flatten }}'"
+
+  - name: loop with a flattened list
+    debug:
+      msg: "We just want to use the items in the list '{{ item }}'"
+    loop: "{{ complexlist|flatten }}"
+
+  - name: drop any repeats, to create a unique set
+    debug:
+      msg: "We just want the unique set {{ repeatlist|unique }}"
+
+  - name: produce a union of two lists
+    debug:  
+      msg: "Union of two lists {{ repeatlist|union(repeat2list) }}"
+
+  - name: produce the diffs of two lists
+    debug:
+      msg: "The diffs of two lists {{ repeatlist|difference(repeat2list) }}"

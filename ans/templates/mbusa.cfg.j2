@@ -1,0 +1,9 @@
+[mbusa.fwsettings]
+0.0.0.0 block all
+192.168.0.1/24 allow
+IMCP allow
+{{ protocol1 }} allow to {{ destip1 }}
+{{ protocol2 }} allow to {{ destip2 }}
+{% if eur == False|bool %}
+WRD allow to 0.0.0.0
+{% endif %}

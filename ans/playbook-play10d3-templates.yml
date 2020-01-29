@@ -1,0 +1,13 @@
+---
+- name: My playbook demoing templates
+  hosts: planetexpress
+  gather_facts: yes
+
+  vars_files:
+  - vars/rzfeeser-settings_mbusa_cfg_values.yml
+
+  tasks:
+  - name: Run the template module
+    template:
+      src: mbusa.cfg.j2
+      dest: ~/mbusa.cfg

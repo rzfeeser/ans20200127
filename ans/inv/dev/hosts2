@@ -1,0 +1,12 @@
+; comments in INI files are made with semi-colons
+; NOT with hashtags ## WRONG
+
+[planetexpress]
+bender ansible_host=10.10.2.3 ansible_user=bender eur=true
+fry    ansible_host=10.10.2.4 ansible_user=fry
+zoidberg ansible_host=10.10.2.5 ansible_user=zoidberg
+farnsworth ansible_host=10.10.2.6 ansible_user=farnsworth
+
+; creating group vars
+[planetexpress:vars]
+eur=false
