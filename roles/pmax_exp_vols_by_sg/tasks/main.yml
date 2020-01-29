@@ -1,33 +1,5 @@
 ---
-- name: PowerMax Dell Playbook v9 - Expanding Volumes with Block Rescue
-  hosts: localhost
-  gather_facts: yes  # for ansible_date_time.date
-
-  # a technique to prompt users for sensitive data
-  # without hard coding that data into the playbook
-  vars_prompt:
-    - name: un
-      prompt: "What is the powermax user to operate as? "
-      default: smc
-    - name: pw
-      prompt: "What is the powermax password? "
-    - name: sg2expand
-      prompt: "What Storage Group's Volumes should be expanded? "
-      private: no
-    - name: nsig
-      prompt: "What is the new size to expand the Volumes within the SG to ? "
-      private: no
-
-  # mapping some vars at top of playbook
-  # this makes it easier to have global changes
-  vars:
-    ush: 10.126.70.19
-    usv: "90"
-    vc: False
-    new_size_in_gb: "{{ nsig }}"
-
-  tasks:
-  - name: Pre-Check Phase
+- name: Pre-Check Phase
     block:    
       - name: Run PMax gather_facts module
         dellemc_powermax_gatherfacts:
@@ -85,7 +57,7 @@
           msg: Pre-Check phase FAILED. Playbook will not continue. Exiting.
 
 
-  - name: Maintenance Phase - Expand Volume
+    - name: Maintenance Phase - Expand Volume
     block:
       - name: Pick up volumes within a storage group
         dellemc_powermax_storagegroup:
@@ -101,7 +73,7 @@
           compression: True
           state: present     ## change this to absent to remove storage group
         register: sgresults
-    
+
       - name: Expand Volume
         dellemc_powermax_volume:
           unispherehost: "{{ ush }}"

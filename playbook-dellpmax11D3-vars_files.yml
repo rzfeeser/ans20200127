@@ -5,18 +5,8 @@
 
   # a technique to prompt users for sensitive data
   # without hard coding that data into the playbook
-  vars_prompt:
-    - name: un
-      prompt: "What is the powermax user to operate as? "
-      default: smc
-    - name: pw
-      prompt: "What is the powermax password? "
-    - name: sg2expand
-      prompt: "What Storage Group's Volumes should be expanded? "
-      private: no
-    - name: nsig
-      prompt: "What is the new size to expand the Volumes within the SG to ? "
-      private: no
+  vars_files:
+    - vars/vol-exp-answers.yml
 
   # mapping some vars at top of playbook
   # this makes it easier to have global changes
