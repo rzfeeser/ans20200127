@@ -1,6 +1,11 @@
 ---
 - name: Expand Vols by WWN
-  block:    
+  block:
+    - name: Show Array corresponding to the WWN
+      debug:
+        var: item.wwn[8:20]
+      loop: "{{ listofwwn2expand }}"
+      
     - name: Expand Volume by WWN
       dellemc_powermax_volume:
         unispherehost: "{{ ush }}"
