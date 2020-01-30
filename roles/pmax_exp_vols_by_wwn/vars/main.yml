@@ -1,0 +1,8 @@
+---
+un: smc  ## This is the USER NAME for the DELL PMAX
+pw: smc  ## This is the PASSWORD for the DELL PMAX
+listofwwn2expand:
+  - wwn: ## a single wwn to expand
+    nsov: ## new size in GB to expand the volume to (int) (total size)
+  - wwn:  ## a single wwn to expand
+    nsov:  ## new size in GB to expand the volume to (int) (total size)
