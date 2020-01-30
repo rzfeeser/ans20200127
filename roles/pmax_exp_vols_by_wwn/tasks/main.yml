@@ -11,7 +11,7 @@
         serial_no: "{{ item.wwn[11:20] }}"  ## a wwn contains the array in this slice
         size: "{{ item.nsov }}"
         cap_unit: GB
-        wwn_id: "{{ item.wwn }}"
+        vol_wwn: "{{ item.wwn }}"
         state: present
       register: expandvolresults
       loop: "{{ listofwwn2expand }}"
