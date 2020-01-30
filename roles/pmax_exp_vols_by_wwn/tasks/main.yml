@@ -1,93 +1,20 @@
 ---
-- name: Pre-Check Phase
+- name: Expand Vols by WWN
   block:    
-    - name: Run PMax gather_facts module
-      dellemc_powermax_gatherfacts:
-        unispherehost: "{{ ush }}"
-        universion: "{{ usv }}"
-        verifycert: "{{ vc }}"
-        user: "{{ un }}"
-        password: "{{ pw }}"
-      register: results
-
-    - name: Provide serial number for next gather facts
-      dellemc_powermax_gatherfacts:
-        unispherehost: "{{ ush }}"
-        universion: "{{ usv }}"
-        verifycert: "{{ vc }}"
-        user: "{{ un }}"
-        password: "{{ pw }}"
-        serial_no: "{{ results.Arrays[0] }}"
-        gather_subset:
-          - vol
-          - sg
-          - srp
-          - pg
-          - host
-          - hg
-          - port
-          - mv
-          - rdf
-      register: arrayresults
-
-    # this is created on the controller
-    # because the playbook is running against host: localhost
-    - name: Create a location for PowerMax output
-      file:
-        state: directory
-        dest: pmax_audit/
-
-    # this is created on the controller
-    # because the playbook is running against host: localhost
-    - name: Create output file
-      copy:
-        dest: "pmax_audit/{{ results.Arrays[0] }}-{{ ansible_date_time.date }}.json"
-        content: "{{ arrayresults }}"
-        
-    - name: Fail is Storage Group does not exist
-      fail:
-        msg: "The Storage Group you supplied does not exist within the PMax array! Aborting!"
-      when: "sg2expand not in arrayresults.StorageGroups"
-      
-  # if the rescue block successfully executes then the playbook will continue
-  # a second fail within the rescue block will abort the entire playbook    
-  rescue:
-    - name: Pre-Check phase FAILED. Exiting.
-      fail:
-        msg: Pre-Check phase FAILED. Playbook will not continue. Exiting.
-
-
-- name: Maintenance Phase - Expand Volume
-  block:
-    - name: Pick up volumes within a storage group
-      dellemc_powermax_storagegroup:
-        unispherehost: "{{ ush }}"
-        universion: "{{ usv }}"
-        verifycert: "{{ vc }}"
-        user: "{{ un }}"
-        password: "{{ pw }}"
-        serial_no: "{{ results.Arrays[0] }}"
-        sg_name: "{{ sg2expand }}"
-        service_level: "Diamond"
-        srp: "SRP_1"
-        compression: True
-        state: present     ## change this to absent to remove storage group
-      register: sgresults
-
-    - name: Expand Volume
+    - name: Expand Volume by WWN
       dellemc_powermax_volume:
         unispherehost: "{{ ush }}"
         universion: "{{ usv }}"
         verifycert: "{{ vc }}"
         user: "{{ un }}"
         password: "{{ pw }}"
-        serial_no: "{{ results.Arrays[0] }}"
-        size: "{{ new_size_in_gb }}"
+        serial_no: "{{ item.wwn[11:20] }}"  ## a wwn contains the array in this slice
+        size: "{{ item.nsov }}"
         cap_unit: GB
-        vol_id: "{{ item }}"
+        wwn_id: "{{ item.wwn }}"
         state: present
       register: expandvolresults
-      loop: "{{ sgresults.storage_group_volumes }}"
+      loop: "{{ listofwwn2expand }}"
         
   rescue:          
     - name: Failed expanding volume

@@ -1,8 +1,11 @@
 ---
+ush: 1.1.1.1  ## IP of unisphere host
+usv: "90" ## Per manual, this appears to be set to 90 for now
+vc: False ## verify cert set to false for testing purposes
 un: smc  ## This is the USER NAME for the DELL PMAX
 pw: smc  ## This is the PASSWORD for the DELL PMAX
 listofwwn2expand:
-  - wwn: ## a single wwn to expand
-    nsov: ## new size in GB to expand the volume to (int) (total size)
-  - wwn:  ## a single wwn to expand
-    nsov:  ## new size in GB to expand the volume to (int) (total size)
+  - wwn: 60000970000197900507533030304538 ## a single wwn to expand
+    nsov: 33 ## new size in GB to expand the volume to (int) (total size)
+#  - wwn: 60000970000197900507533030304538 ## a single wwn to expand
+#    nsov: 34 ## new size in GB to expand the volume to (int) (total size)
