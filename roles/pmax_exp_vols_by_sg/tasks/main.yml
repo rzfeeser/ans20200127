@@ -93,3 +93,19 @@
     - name: Failed expanding volume
       fail:
         msg: "Failed expanding volume. Consider designing rollback tasks before exiting."
+        
+- name: Post-Check
+  block:
+    # this is created on the controller
+    # because the playbook is running against host: localhost
+    - name: Create a location for PowerMax output
+      file:
+        state: directory
+        dest: pmax_audit/exp_vol_by_sg/
+  
+    # this is created on the controller
+    # because the playbook is running against host: localhost
+    - name: Create output file that is results of expanding volumes
+      copy:
+        dest: "pmax_audit/exp_vol_by_sg/{{ expandvolresults }}-{{ ansible_date_time.date }}.json"
+        content: "{{ expandvolresults }}"
