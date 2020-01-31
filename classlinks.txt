@@ -1,3 +1,6 @@
+Alta3 Training Videos
+https://www.youtube.com/user/Alta3Research/videos
+
 Ansible project on GitHub:
 https://github.com/ansible/
 
